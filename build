@@ -79,6 +79,7 @@ function buildPjSip {
 
     echo "Copying PJSUA .so library to final build directory ..."
     mkdir -p "${FINAL_BUILD_LIB}/${arch}"
+    PJSUA_GENERATED_SO_PATH="${PJSUA_BASE_DIR}/java/android/app/src/main/jniLibs/${arch}/libpjsua2.so"
     mv "${PJSUA_GENERATED_SO_PATH}" "${FINAL_BUILD_LIB}/${arch}/"
 
     if [ -f ${OPENH264_BUILD_OUT_PATH}/libs/${arch}/lib/libopenh264.so ]; then

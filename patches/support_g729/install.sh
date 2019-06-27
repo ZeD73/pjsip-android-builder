@@ -4,7 +4,7 @@
 
 PJPROJECT_BASE_FOLDER="$DOWNLOAD_DIR/$PJSIP_DIR_NAME"
 
-if [ "$PJSIP_VERSION" == "2.8" ]
+if [ "$PJSIP_VERSION" -gt "2.7" ]
 then
     cp g729.patch $PJPROJECT_BASE_FOLDER
 else
